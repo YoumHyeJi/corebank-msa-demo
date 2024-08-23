@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/account.main.iml" filepath="$PROJECT_DIR$/.idea/modules/account.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/corebank-msa-poc.iml" filepath="$PROJECT_DIR$/.idea/corebank-msa-poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/customer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/customer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/orchestrator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/orchestrator.main.iml" />
+    </modules>
+  </component>
+</project>

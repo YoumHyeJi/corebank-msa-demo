@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: banking
+
+  kafka:
+    bootstrap-servers: kafka0:9092,kafka1:9092,kafka2:9092
+    consumer:
+      group-id: banking-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  datasource:
+    url: jdbc:mysql://mysql-banking:3306/banking
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect

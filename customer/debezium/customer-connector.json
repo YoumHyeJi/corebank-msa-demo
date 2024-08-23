@@ -1,0 +1,23 @@
+{
+  "name": "customer-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "tasks.max": "1",
+    "database.hostname": "mysql-customer",
+    "database.port": "3306",
+    "database.user": "root",
+    "database.password": "root",
+    "database.server.id": "184057",
+    "topic.prefix": "CUSTOMER",
+    "database.include.list": "customer",
+    "table.include.list": "customer.outbox",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka0:9092,kafka1:9092,kafka2:9092",
+    "schema.history.internal.kafka.topic": "SCHEMA_CHANGES.CUSTOMER",
+    "transforms": "outbox",
+    "transforms.outbox.type" : "io.debezium.transforms.outbox.EventRouter",
+    "transforms.outbox.table.expand.json.payload": "true",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "transforms.outbox.route.topic.replacement" : "CUSTOMER_${routedByValue}",
+    "transforms.outbox.table.fields.additional.placement" : "type:header:eventType"
+  }
+}
